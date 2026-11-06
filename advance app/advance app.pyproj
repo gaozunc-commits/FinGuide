@@ -1,0 +1,60 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>93a6c7f2-124c-4421-ba45-f8deb0084a05</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>FinGuide\Main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>advance app</Name>
+    <RootNamespace>advance app</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="FinGuide\Expense_Tracker.py" />
+    <Compile Include="FinGuide\Budget_Planner.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinGuide\Main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinGuide\Data_Manager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinGuide\Base_Finance_Module.py" />
+    <Compile Include="FinGuide\Saving_Goal_Tracker.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FinGuide\Tax_Estimator.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FinGuide\Data\finance_data.txt" />
+    <Content Include="FinGuide\Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FinGuide\" />
+    <Folder Include="FinGuide\Images\" />
+    <Folder Include="FinGuide\Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
